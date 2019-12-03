@@ -45,21 +45,21 @@ with open(csvpath, newline='') as csvfile:
     change_list.pop(0)
     
     #The number of months in the data set
-    Total_months =len(list(date))
+    Total_months =len(date)
     
     #The average total change over the entire period
-    avg_change = round(sum(change_list)/len(list(change_list)), 2)
+    avg_change = round(sum(change_list)/len(change_list), 2)
     
     #The greatest increase
     maxTri = max(change_list)
     maxTri_index = change_list.index(maxTri)
-    maxTri_date = date[maxTri_index]
+    maxTri_date = date[maxTri_index+1]
 
     
     #The greatest decreases
     minTri = min(change_list)
     minTri_index = change_list.index(minTri)
-    minTri_date = date[minTri_index]
+    minTri_date = date[minTri_index+1]
     
     
     
